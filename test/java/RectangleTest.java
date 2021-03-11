@@ -35,4 +35,14 @@ public class RectangleTest {
 
         assertEquals(expectedArea,newRectangle.area());
     }
+
+    @Test
+    public void testAreaIsZeroForOneSideValuedZero(){
+        int length =0;
+        int breadth = 4;
+        Rectangle newRectangle = new Rectangle(length,breadth);
+        int expectedArea = 0;
+
+        assertEquals(expectedArea,newRectangle.area());
+    }
 }
