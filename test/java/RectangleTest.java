@@ -123,4 +123,14 @@ public class RectangleTest {
 
         assertEquals(expectedPerimeter,newRectangle.perimeter());
     }
+
+    @Test
+    public void testPerimeterForBothSidesValuedZero(){
+        int length = 0;
+        int breadth = 0;
+        Rectangle newRectangle = new Rectangle(length,breadth);
+        int expectedPerimeter = 0;
+
+        assertEquals(expectedPerimeter,newRectangle.perimeter());
+    }
 }
