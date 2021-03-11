@@ -83,4 +83,14 @@ public class RectangleTest {
 
         assertEquals(expectedPerimeter,newRectangle.perimeter());
     }
+
+    @Test
+    public void testPerimeterForBreadthAsValuedSides(){
+        int length = 4;
+        int breadth = -2;
+        Rectangle newRectangle = new Rectangle(length,breadth);
+        int expectedPerimeter = 4;
+
+        assertEquals(expectedPerimeter,newRectangle.perimeter());
+    }
 }
