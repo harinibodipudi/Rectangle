@@ -7,22 +7,31 @@ import utility.Rectangle;
 public class RectangleTest {
 
     @Test
-    public void TestAreaIsPositiveForPositiveValuedSide(){
+    public void testAreaIsPositiveForPositiveValuedSide(){
         int length = 5;
         int breadth = 10;
         Rectangle newRectangle = new Rectangle(length,breadth);
         int expectedArea = 50;
-        
+
         assertEquals(expectedArea,newRectangle.area());
     }
 
     @Test
-
-    public void TestAreaIsNegativeForOneNegativeValuedSides(){
+    public void testAreaIsNegativeForOneNegativeValuedSides(){
         int length = -10;
         int breadth = 4;
         Rectangle newRectangle = new Rectangle(length,breadth);
         int expectedArea = -40;
+
+        assertEquals(expectedArea,newRectangle.area());
+    }
+
+    @Test
+    public void testAreaIsPositiveForBothSidesValuedNegative(){
+        int length = -10;
+        int breadth = -4;
+        Rectangle newRectangle = new Rectangle(length,breadth);
+        int expectedArea = 40;
 
         assertEquals(expectedArea,newRectangle.area());
     }
